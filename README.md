@@ -1,6 +1,8 @@
 # BottleNeck-Detection
 Abstract:
 "BottleNeck Detection using CNN and LSTM" focuses on leveraging Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks to detect bottlenecks in diverse processes. The project involves collecting and preprocessing data related to manufacturing, transportation, or supply chain logistics. CNNs are employed for feature extraction from the input data, while LSTMs capture temporal dependencies. The model is trained on labeled data and validated for accuracy and generalization. Upon deployment, it detects bottlenecks in real-time scenarios, facilitating improved process efficiency and resource utilization. The project aims to provide an effective solution for bottleneck detection, enhancing productivity across various industries.
+
+
 Key components of the project include:
 
 Data Collection and Preprocessing: Gathering data related to the process under consideration, such as manufacturing, transportation, or supply chain logistics. Preprocessing involves cleaning, filtering, and formatting the data to make it suitable for analysis.
