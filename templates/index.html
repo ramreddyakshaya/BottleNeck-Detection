@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>A Hybrid Deep Learning Approach for Bottleneck Detection in IoT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <style>
+        html {
+            background-image: url('your_background_image.jpg');
+            background-size: cover;
+        }
+        body {
+            background-color: transparent !important;
+            padding-top: 70px; 
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.7); 
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center">
+            <img src="{{ url_for('static', filename='IoT.jpg') }}" alt="Grain in hand">
+        </div>
+        <h2 class="text-center">Bottleneck Detection in IoT</h2>
+        <hr>
+        <div class="text-center">
+            <h1>
+                <p>The predicted result is: {{ prediction_result }}</p>
+            </h1>
+        </div>
+        <hr>
+        <form id="predictionForm" action="/predict" method="POST">
+            <div class="row">
+                <div class="col-md-6 offset-md-3"> 
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="ip.flags.df">ip.flags.df</label>
+                                <input type="text" required name="ip.flags.df" class="form-control" placeholder="Enter ip.flags.df">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="frame.len">frame.len</label>
+                                <input type="text" required name="frame.len" class="form-control" placeholder="Enter frame.len">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Rx_Bytes">Rx Bytes</label>
+                                <input type="text" required name="Rx_Bytes" class="form-control" placeholder="Enter Rx_Bytes">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="tcp.srcport">tcp.srcport</label>
+                                <input type="text" required name="tcp.srcport" class="form-control" placeholder="Enter tcp.srcport">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Tx_Bytes">Tx Bytes'</label>
+                                <input type="text" required name="Tx_Bytes" class="form-control" placeholder="Enter Tx_Bytes">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Tx_Packets">Tx Packets</label>
+                                <input type="text" required name="Tx_Packets" class="form-control" placeholder="Enter Tx_Packets">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Packets">Packets</label>
+                                <input type="text" required name="Packets" class="form-control" placeholder="Enter Packets">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Rx_Packets">Rx Packets</label>
+                                <input type="text" required name="Rx_Packets" class="form-control" placeholder="Enter Rx_Packets">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-block" type="submit">Predict</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+    
+
+</body>
+</html>
